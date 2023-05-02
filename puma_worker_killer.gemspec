@@ -14,6 +14,14 @@ Gem::Specification.new do |gem|
   gem.homepage      = 'https://github.com/schneems/puma_worker_killer'
   gem.license       = 'MIT'
 
+  # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
+  # delete this section to allow pushing this gem to any host.
+  if spec.respond_to?(:metadata)
+    spec.metadata['allowed_push_host'] = "https://rubygems.pkg.github.com/RisePeopleInc"
+  else
+    raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
+  end
+
   gem.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
   gem.executables   = gem.files.grep(%r{^bin/}).map { |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
