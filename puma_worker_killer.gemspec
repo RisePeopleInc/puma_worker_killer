@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "https://rubygems.pkg.github.com/RisePeopleInc"
+    gem.metadata['allowed_push_host'] = "https://rubygems.pkg.github.com/RisePeopleInc"
   else
     raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end
